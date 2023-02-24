@@ -3,7 +3,7 @@ export default function Home() {
     <div>
         <h1 className="text-9xl">
           Hi,
-          Welcome to my github pages action
+          I am here
         </h1>
     </div>
   )
