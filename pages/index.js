@@ -1,10 +1,7 @@
-export default function Home() {
+export default function Home({handleProps}) {
   return (
     <div>
-        <h1 className="text-9xl">
-          Hi,
-          I am here
-        </h1>
+       <button onClick={handleProps}>Click here</button>
     </div>
   )
 }
