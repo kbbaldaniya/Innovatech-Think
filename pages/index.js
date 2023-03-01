@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 export default function Home() {
-  const [appData, setAppData] = useState({})
+  const [appData, setAppData] = useState('')
   const handleProps = () => { console.log('handleProps'), window.ReactNativeWebView.postMessage(JSON.stringify({ label: 'react-testing' })) }
 
   useEffect(() => {
@@ -11,10 +11,9 @@ export default function Home() {
     })
   }, [])
 
-  useEffect(() => {
-    console.log("appData", appData);
+  useEffect(()=>{
+    console.log({appData});
   },[appData])
-
 
   return (
     <div>
