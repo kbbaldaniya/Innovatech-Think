@@ -1,5 +1,13 @@
+import { useEffect } from "react"
+
 export default function Home() {
-  const handleProps = () => { window.ReactNativeWebView.postMessage(JSON.stringify({label: 'react-testing'})) }
+  const handleProps = () => { document.ReactNativeWebView.postMessage(JSON.stringify({ label: 'react-testing' })) }
+  useEffect(() => {
+    document.addEventListener("message", function (data) {
+      // newData.push(data.data)
+      alert(data.data)
+    })
+  }, [])
   return (
     <div>
       <h1>Native Testing...</h1>
