@@ -7,7 +7,7 @@ export default function Home() {
   useEffect(() => {
     console.log('UseEffect');
     window.addEventListener("message", (event) => {
-      setAppData(JSON.stringify(event));
+      setAppData(JSON.stringify(event.data));
     })
   }, [])
 
