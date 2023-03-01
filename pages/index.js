@@ -1,16 +1,19 @@
 import { useEffect, useState } from "react"
 
 export default function Home() {
-  const [appData, setAppData] = useState('')
+  const [appData, setAppData] = useState({})
   const handleProps = () => { console.log('handleProps'), window.ReactNativeWebView.postMessage(JSON.stringify({ label: 'react-testing' })) }
 
   useEffect(() => {
     console.log('UseEffect');
     window.addEventListener("message", (event) => {
-      console.log(event?.data);
-      setAppData(JSON.stringify(event?.data));
+      setAppData(JSON.stringify(event));
     })
   }, [])
+
+  useEffect(() => {
+    console.log("appData", appData);
+  },[appData])
 
 
   return (
