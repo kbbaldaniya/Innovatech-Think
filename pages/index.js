@@ -3,10 +3,12 @@ import { useEffect } from "react"
 export default function Home() {
   const handleProps = () => { console.log('handleProps'), window.ReactNativeWebView.postMessage(JSON.stringify({ label: 'react-testing' })) }
 
-  document.addEventListener("message", function (data) {
-    console.log('data', data);
-    // newData.push(data.data)
-    alert(data.data)
+  useEffect(() => {
+    document.addEventListener("message", function (data) {
+      console.log('data', data);
+      // newData.push(data.data)
+      alert(data.data)
+    })
   })
 
 
