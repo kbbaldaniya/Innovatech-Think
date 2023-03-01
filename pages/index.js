@@ -1,15 +1,17 @@
-import { useEffect } from "react"
+import { useEffect, useLayoutEffect, useState } from "react"
 
 export default function Home() {
+  const [effectCall, setEffectCall] = useState(true)
   const handleProps = () => { console.log('handleProps'), window.ReactNativeWebView.postMessage(JSON.stringify({ label: 'react-testing' })) }
 
   useEffect(() => {
-    document.addEventListener("message", function (data) {
-      console.log('data', data);
-      // newData.push(data.data)
-      alert(data.data)
+    console.log('UseEffect');
+
+    window.addEventListener("message", (event) => {
+      console.log('data', event.data);
+      setEffectCall(!effectCall)
     })
-  })
+  }, [effectCall])
 
 
   return (
