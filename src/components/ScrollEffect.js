@@ -9,7 +9,7 @@ const ScrollEffect = () => {
     ))
 
   return (
-    <>
+    <div id='scrollEffect'>
       <div className="loading">
         <h1>Scroll Down</h1>
         <center class="down">
@@ -26,7 +26,7 @@ const ScrollEffect = () => {
       </svg>
       <h2 className="heading-1">Exciting things are happening behind the scenes!</h2>
       <h3 className="heading-2">Our site is currently under creation and will be ready soon.</h3>
-    </>
+    </div>
   )
 }
 
