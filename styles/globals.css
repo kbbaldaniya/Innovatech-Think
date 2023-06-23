@@ -11,10 +11,22 @@ html,
   --outer-space: #3b4e55;
   --blue-gradients: linear-gradient(90deg, #018abd 0%, #004581 100%);
 }
-/* body {
+body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
     Helvetica Neue, sans-serif;
+  background: var(--gray);
+  color: var(--light-gray);
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Scroll Effect */
+
+#scrollEffect {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,14 +36,9 @@ html,
   background: var(--gray);
   color: var(--light-gray);
   min-height: 250vh;
-} */
-
-::-webkit-scrollbar {
-  width: 0;
-  height: 0;
 }
 
-/* .loading {
+.loading {
   position: fixed;
   animation: loading 1s linear infinite;
   animation-play-state: paused;
@@ -46,45 +53,47 @@ html,
     bottom: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    opacity: 1;
   }
   to {
     bottom: -100%;
     left: 50%;
     transform: translate(-50%, -50%);
+    opacity: 0;
   }
-} */
-/*
+}
+
 .ball1 {
-	background: var(--blue);
-	height: 8px;
-	width: 8px;
-	border-radius: 100%;
+  background: var(--blue);
+  height: 8px;
+  width: 8px;
+  border-radius: 100%;
 }
 .ball2 {
-	background: var(--blue);
-	height: 6px;
-	width: 6px;
-	border-radius: 100%;
+  background: var(--blue);
+  height: 6px;
+  width: 6px;
+  border-radius: 100%;
 }
 .ball3 {
-	background: var(--blue);
-	height: 4px;
-	width: 4px;
-	border-radius: 100%;
+  background: var(--blue);
+  height: 4px;
+  width: 4px;
+  border-radius: 100%;
 }
 .spacer {
-	height: 5px;
+  height: 5px;
 }
 .arrow {
-	height: 20px;
-	width: 20px;
-	border: 0;
-	border-right: 4px solid var(--blue);
-	border-top: 4px solid var(--blue);
-	transform: translateY(-10px) rotate(135deg);
-} */
+  height: 20px;
+  width: 20px;
+  border: 0;
+  border-right: 4px solid var(--blue);
+  border-top: 4px solid var(--blue);
+  transform: translateY(-10px) rotate(135deg);
+}
 
-/* .logo {
+.logo {
   position: fixed;
   animation: logo 1s linear infinite;
   animation-play-state: paused;
@@ -104,14 +113,19 @@ html,
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  100% {
+  70% {
     top: 37%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
-} */
+  100% {
+    top: -180px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 
-/* .heading-1 {
+.heading-1 {
   position: fixed;
   animation: heading-1 1s linear infinite;
   animation-play-state: paused;
@@ -132,14 +146,19 @@ html,
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  100% {
+  70%{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
-} */
+  100% {
+    top: -20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 
-/* .heading-2 {
+.heading-2 {
   position: fixed;
   animation: heading-2 1s linear infinite;
   animation-play-state: paused;
@@ -161,16 +180,21 @@ html,
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  100% {
+  70% {
     top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
-} */
+  100% {
+    top: -16%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 
 /* Mouse Move Effect*/
 
-#parallax-frame{
+#parallax-frame {
   margin: 0;
   width: 100vw;
   height: 100vh;
@@ -181,8 +205,7 @@ html,
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url(../src/assets/3dImage/Img-2.png),
-    url(../src/assets/3dImage/Img-1.png),
+  background-image: url(../src/assets/3dImage/Img-2.png), url(../src/assets/3dImage/Img-1.png),
     url(../src/assets/3dImage/main.png);
   background-repeat: no-repeat;
   background-position: center;
