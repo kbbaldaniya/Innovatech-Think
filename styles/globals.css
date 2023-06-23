@@ -11,7 +11,7 @@ html,
   --outer-space: #3b4e55;
   --blue-gradients: linear-gradient(90deg, #018abd 0%, #004581 100%);
 }
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
     Helvetica Neue, sans-serif;
@@ -24,14 +24,14 @@ body {
   background: var(--gray);
   color: var(--light-gray);
   min-height: 250vh;
-}
+} */
 
 ::-webkit-scrollbar {
   width: 0;
   height: 0;
 }
 
-.loading {
+/* .loading {
   position: fixed;
   animation: loading 1s linear infinite;
   animation-play-state: paused;
@@ -52,8 +52,8 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
   }
-}
-
+} */
+/*
 .ball1 {
 	background: var(--blue);
 	height: 8px;
@@ -82,9 +82,9 @@ body {
 	border-right: 4px solid var(--blue);
 	border-top: 4px solid var(--blue);
 	transform: translateY(-10px) rotate(135deg);
-}
+} */
 
-.logo {
+/* .logo {
   position: fixed;
   animation: logo 1s linear infinite;
   animation-play-state: paused;
@@ -109,9 +109,9 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
   }
-}
+} */
 
-.heading-1 {
+/* .heading-1 {
   position: fixed;
   animation: heading-1 1s linear infinite;
   animation-play-state: paused;
@@ -137,9 +137,9 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
   }
-}
+} */
 
-.heading-2 {
+/* .heading-2 {
   position: fixed;
   animation: heading-2 1s linear infinite;
   animation-play-state: paused;
@@ -166,4 +166,25 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+} */
+
+/* Mouse Move Effect*/
+
+#parallax-frame{
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--gray);
+}
+
+#parallax {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../src/assets/3dImage/Img-2.png),
+    url(../src/assets/3dImage/Img-1.png),
+    url(../src/assets/3dImage/main.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: 50% 50%;
 }
