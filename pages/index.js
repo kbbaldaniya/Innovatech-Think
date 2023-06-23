@@ -4,7 +4,7 @@ import ScrollEffect from "../src/components/ScrollEffect";
 export default function Home() {
   return (
     <>
-      {/* <ScrollEffect /> */}
+      <ScrollEffect />
       <MouseMoveEffect />
     </>
   )
