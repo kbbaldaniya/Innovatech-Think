@@ -12,13 +12,13 @@ const ScrollEffect = () => {
     <div id='scrollEffect'>
       <div className="loading">
         <h1>Scroll Down</h1>
-        <center class="down">
-          <div class="ball3"></div>
-          <div class="spacer"></div>
-          <div class="ball2"></div>
-          <div class="spacer"></div>
-          <div class="ball1"></div>
-          <div class="arrow"></div>
+        <center className="down">
+          <div className="ball3"></div>
+          <div className="spacer"></div>
+          <div className="ball2"></div>
+          <div className="spacer"></div>
+          <div className="ball1"></div>
+          <div className="arrow"></div>
         </center>
       </div>
       <svg className="logo" width="100" height="100" viewBox="0 0 24 24">
