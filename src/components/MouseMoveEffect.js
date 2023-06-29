@@ -1,14 +1,15 @@
 import React, { useEffect } from 'react'
+import Title from './common/Title';
 
 const MouseMoveEffect = () => {
-  useEffect(() => {
 
+  useEffect(() => {
     document.addEventListener("mousemove", parallax);
     const elem = document.querySelector("#parallax");
+    let _w = window.innerWidth / 2;
+    let _h = window.innerHeight / 2;
 
     function parallax(e) {
-      let _w = window.innerWidth / 2;
-      let _h = window.innerHeight / 2;
       let _mouseX = e.clientX;
       let _mouseY = e.clientY;
       let _depth1 = `${50 - (_mouseX - _w) * 0.01}% ${50 - (_mouseY - _h) * 0.01}%`;
@@ -21,6 +22,7 @@ const MouseMoveEffect = () => {
 
   return (
     <div id='parallax-frame'>
+      <div> Chips </div>
       <div id="parallax"></div>
     </div>
   )
