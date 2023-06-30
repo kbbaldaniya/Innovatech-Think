@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Innovatech Think Pvt Ltd</title>
+        <title>Parallax Demo</title>
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
