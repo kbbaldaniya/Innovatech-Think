@@ -1,47 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from "swiper";
-
-const sliderData = [{
-  img: "https://img.myloview.es/cuadros/programming-web-banner-best-programming-languages-technology-process-of-software-development-400-173369521.jpg",
-  heading: 'Lorem ipsum dolor',
-  discription: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum, nobis tempora quam ducimus veritatis sint aut adipisci quibusdam repudiandae autem at! At nihil repudiandae dicta obcaecati'
-},
-{
-  img: "https://media.istockphoto.com/id/1466262366/photo/software-development-branching-strategy-process-workflow-with-flowchart-diagram-showing.jpg?b=1&s=612x612&w=0&k=20&c=xpTqPRRJ-IZpfq_VwJ-9askffaMCD0YTNDcEXMlxyrg=",
-  heading: 'Dolore minus quibusdam',
-  discription: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum, nobis tempora quam ducimus veritatis sint aut adipisci quibusdam repudiandae autem at! At nihil repudiandae dicta obcaecati'
-},
-{
-  img: "https://community.connection.com/wp-content/uploads/2022/08/1842784-SIEM-Technology-Blog.jpg",
-  heading: 'Sequi provident ratione',
-  discription: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum, nobis tempora quam ducimus veritatis sint aut adipisci quibusdam repudiandae autem at! At nihil repudiandae dicta obcaecati'
-},
-{
-  img: "https://etimg.etb2bimg.com/photo/98828436.cms",
-  heading: 'Aspernatur fugiat qui dolorum',
-  discription: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum, nobis tempora quam ducimus veritatis sint aut adipisci quibusdam repudiandae autem at! At nihil repudiandae dicta obcaecati'
-},
-{
-  img: "https://cdn-bbaid.nitrocdn.com/wYFmIWkSNKpdInpiRfVoEqTErZtkFjBo/assets/images/optimized/rev-32e1ec2/wp-content/uploads/2022/03/Software-Product-Development-Strategy_Banner.jpg",
-  heading: 'Tempora repellat aliquam',
-  discription: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum, nobis tempora quam ducimus veritatis sint aut adipisci quibusdam repudiandae autem at! At nihil repudiandae dicta obcaecati'
-},
-{
-  img: "https://t4.ftcdn.net/jpg/04/19/26/97/360_F_419269782_9LsP3TQndMVnZ2j3ZhTPhMjaqQpFAth9.jpg",
-  heading: 'Debitis rem soluta nulla',
-  discription: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum, nobis tempora quam ducimus veritatis sint aut adipisci quibusdam repudiandae autem at! At nihil repudiandae dicta obcaecati'
-},
-{
-  img: "https://e0.pxfuel.com/wallpapers/626/499/desktop-wallpaper-software-development-code-at.jpg",
-  heading: 'Lorem ipsum dolor',
-  discription: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum, nobis tempora quam ducimus veritatis sint aut adipisci quibusdam repudiandae autem at! At nihil repudiandae dicta obcaecati'
-},
-{
-  img: "https://media.istockphoto.com/id/1466262366/photo/software-development-branching-strategy-process-workflow-with-flowchart-diagram-showing.jpg?b=1&s=612x612&w=0&k=20&c=xpTqPRRJ-IZpfq_VwJ-9askffaMCD0YTNDcEXMlxyrg=",
-  heading: 'Dolore minus quibusdam',
-  discription: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum, nobis tempora quam ducimus veritatis sint aut adipisci quibusdam repudiandae autem at! At nihil repudiandae dicta obcaecati'
-},]
+import {sliderData} from './StaticData'
 
 const Slider = () => {
   const [item, setItem] = useState({
@@ -165,7 +125,7 @@ const Slider = () => {
         className="hero__swiper swiper"
       >
         <div className="swiper-wrapper">
-          {sliderData.map((data, ind) =>
+          {sliderData?.map((data, ind) =>
             <SwiperSlide key={ind} className='swiper-slide' id='current-slide'>
               <div className="content content--slide">
                 <img className="content__image" src={data.img} alt="" />
